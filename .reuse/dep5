@@ -1,0 +1,49 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hook-discord
+Upstream-Contact: The hook-discord Authors <https://github.com/SemRels/hook-discord>
+Source: https://github.com/SemRels/hook-discord
+
+# ----------------------------------------------------------------------------
+# Documentation and community health files
+# ----------------------------------------------------------------------------
+Files: *.md
+ .github/**/*.md
+Copyright: 2026 The hook-discord Authors
+License: Apache-2.0
+
+# ----------------------------------------------------------------------------
+# Build and tooling configuration
+# ----------------------------------------------------------------------------
+Files: Makefile
+ Makefile.template
+ Dockerfile
+ go.mod
+ go.sum
+ .golangci.yml
+ *.template
+ .gitignore
+ .gitignore.template
+ .github/**/*.yml
+ .github/**/*.yaml
+ .github/**/*.json
+ .github/**/*.template
+ .reuse/dep5
+ cmd/**/*.go
+ internal/**/*.go
+ proto/**
+Copyright: 2026 The hook-discord Authors
+License: Apache-2.0
+
+# ----------------------------------------------------------------------------
+# Legal files (not covered by a license themselves)
+# ----------------------------------------------------------------------------
+Files: LICENSE
+ LICENSES/Apache-2.0.txt
+ NOTICE
+Copyright: 2026 The hook-discord Authors
+License: Apache-2.0
+
+# JSON Schema files
+Files: schema/*.json
+Copyright: The hook-discord Authors
+License: Apache-2.0
