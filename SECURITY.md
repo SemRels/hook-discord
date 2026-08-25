@@ -4,7 +4,7 @@
 
 | Version | Supported |
 | --- | --- |
-| `main` (pre-release) | ✅ |
+| `main` / `{{DEFAULT_BRANCH}}` | ? |
 
 Update this table once stable releases exist.
 
@@ -12,9 +12,9 @@ Update this table once stable releases exist.
 
 **Do not open a public issue for security vulnerabilities.**
 
-Please report vulnerabilities through **[GitHub Security Advisories](https://github.com/SemRels/hook-discord/security/advisories/new)**.
+Please report vulnerabilities through **[GitHub Security Advisories]({{SECURITY_ADVISORY_URL}})**.
 
-Alternative contact: security@semrel.dev
+Alternative contact: {{SECURITY_CONTACT}}
 
 ## What To Include
 
