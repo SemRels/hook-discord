@@ -1,6 +1,6 @@
 # Code of Conduct
 
-hook-discord is committed to providing a welcoming and harassment-free community. We follow the spirit of the [CNCF Community Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) as a guideline.
+hook-discord is committed to providing a welcoming and harassment-free community.
 
 ## Our Pledge
 

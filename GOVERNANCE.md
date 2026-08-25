@@ -2,11 +2,7 @@
 
 ## Overview
 
-hook-discord is an open source project governed by its maintainers and community contributors. This repository hosts the SemRels Discord notification hook plugin.
-
-## Scope
-
-This governance applies to plugin code, release automation, workflows, and repository documentation.
+{{PROJECT_NAME}} is an open source project governed by its maintainers and community contributors. This document describes how decisions are made and how to participate.
 
 ## Project Roles
 
@@ -35,6 +31,13 @@ Default decision making uses **lazy consensus**: a proposed change is accepted u
 For significant architectural, governance, or ecosystem decisions, open an issue or discussion first and document the outcome in the repository.
 
 If consensus cannot be reached, active maintainers vote. Each maintainer has one vote and a simple majority decides.
+
+## Scope By Repository Type
+
+- **Type A / Core:** full governance applies, including architecture and release policy decisions
+- **Type B / Plugin Collection:** governance applies to plugin quality gates, release expectations, and compatibility policy
+- **Type C / Single Plugin:** maintainers may simplify process, but ownership and decision rules should remain documented
+- **Type D / Documentation:** governance can stay lightweight, but maintainers, review expectations, and change process should still be explicit
 
 ## Changes to Governance
 
