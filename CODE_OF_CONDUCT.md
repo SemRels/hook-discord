@@ -1,6 +1,6 @@
 # Code of Conduct
 
-hook-discord is committed to providing a welcoming and harassment-free community.
+`hook-discord` is committed to providing a welcoming and harassment-free community.
 
 ## Our Pledge
 
