@@ -38,29 +38,31 @@ cosign verify ghcr.io/semrels/hook-discord:latest \
 
 ```yaml
 plugins:
-  - name: hook-discord
-    path: ~/.semrel/plugins/semrel-plugin-hook-discord
-    env:
-      SEMREL_PLUGIN_DISCORD_WEBHOOK_URL: "https://discord.com/api/webhooks/1234567890/abcdef"
-      SEMREL_PLUGIN_REPOSITORY: "SemRels/hook-discord"
-      SEMREL_PLUGIN_FIRST_TIME_CONTRIBUTORS: "true"
-      SEMREL_PLUGIN_RELEASE_MVP: "true"
-      SEMREL_PLUGIN_MAX_RETRIES: "3"
-      SEMREL_PLUGIN_RETRY_DELAY: "2s"
+  - uses: "@semrel/hook-discord"
+    phase: release
+    args:
+      discord_webhook_url: "https://discord.com/api/webhooks/1234567890/abcdef"
+      repository: "SemRels/hook-discord"
+      first_time_contributors: "true"
+      release_mvp: "true"
+      max_retries: "3"
+      retry_delay: "2s"
 ```
 
-## `SEMREL_PLUGIN_*` variables
+## Options
 
-| Name | Required | Description | Default |
-| --- | --- | --- | --- |
-| `SEMREL_PLUGIN_DISCORD_WEBHOOK_URL` | Required unless dry-run | Discord webhook URL. | None |
-| `SEMREL_PLUGIN_REPOSITORY` | Optional | Repository name or URL shown in the embed fields. | None |
-| `SEMREL_PLUGIN_RELEASE_URL` | Optional | Explicit release URL used as the embed title link. When unset, the plugin derives one from `SEMREL_REPOSITORY_URL` or `SEMREL_PLUGIN_REPOSITORY`. | None |
-| `SEMREL_PLUGIN_FIRST_TIME_CONTRIBUTORS` | Optional | Add a **New Contributors** field when contributor metadata is available. Supports the legacy alias `SEMREL_PLUGIN_NEW_CONTRIBUTORS`. | `false` |
-| `SEMREL_PLUGIN_RELEASE_MVP` | Optional | Add a **🏆 Release MVP** field using the contributor with the most commits. Supports the legacy alias `SEMREL_PLUGIN_MVP`. | `false` |
-| `SEMREL_PLUGIN_MAX_RETRIES` | Optional | Retries on transient network failures and HTTP `5xx` responses. Discord `429` rate limits are retried once after `Retry-After`. | `3` |
-| `SEMREL_PLUGIN_RETRY_DELAY` | Optional | Delay between retry attempts for transient failures. | `2s` |
-| `SEMREL_PLUGIN_CONTRIBUTORS_JSON` | Optional | Legacy contributor JSON payload. `SEMREL_CONTRIBUTORS` is preferred when semrel core provides it. | None |
+Every option can be set as an entry under `args` in `.semrel.yaml`. semrel passes each entry to the plugin as the environment variable shown in the table, so you can also set that variable directly (for example in your CI environment) instead of using `args`.
+
+| Argument | Environment variable | Required | Description | Default |
+| --- | --- | --- | --- | --- |
+| `discord_webhook_url` | `SEMREL_PLUGIN_DISCORD_WEBHOOK_URL` | Required unless dry-run | Discord webhook URL. | None |
+| `repository` | `SEMREL_PLUGIN_REPOSITORY` | Optional | Repository name or URL shown in the embed fields. | None |
+| `release_url` | `SEMREL_PLUGIN_RELEASE_URL` | Optional | Explicit release URL used as the embed title link. When unset, the plugin derives one from `SEMREL_REPOSITORY_URL` or `SEMREL_PLUGIN_REPOSITORY`. | None |
+| `first_time_contributors` | `SEMREL_PLUGIN_FIRST_TIME_CONTRIBUTORS` | Optional | Add a **New Contributors** field when contributor metadata is available. Supports the legacy alias `SEMREL_PLUGIN_NEW_CONTRIBUTORS`. | `false` |
+| `release_mvp` | `SEMREL_PLUGIN_RELEASE_MVP` | Optional | Add a **🏆 Release MVP** field using the contributor with the most commits. Supports the legacy alias `SEMREL_PLUGIN_MVP`. | `false` |
+| `max_retries` | `SEMREL_PLUGIN_MAX_RETRIES` | Optional | Retries on transient network failures and HTTP `5xx` responses. Discord `429` rate limits are retried once after `Retry-After`. | `3` |
+| `retry_delay` | `SEMREL_PLUGIN_RETRY_DELAY` | Optional | Delay between retry attempts for transient failures. | `2s` |
+| `contributors_json` | `SEMREL_PLUGIN_CONTRIBUTORS_JSON` | Optional | Legacy contributor JSON payload. `SEMREL_CONTRIBUTORS` is preferred when semrel core provides it. | None |
 
 ## `SEMREL_*` release context used
 
