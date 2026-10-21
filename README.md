@@ -1,8 +1,10 @@
 # hook-discord
 
-[![Latest Release](https://img.shields.io/github/v/release/SemRels/hook-discord?label=version&color=5865F2)](https://github.com/SemRels/hook-discord/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/SemRels/hook-discord?label=version&color=blue)](https://github.com/SemRels/hook-discord/releases/latest)
 [![CI](https://github.com/SemRels/hook-discord/actions/workflows/ci.yml/badge.svg)](https://github.com/SemRels/hook-discord/actions/workflows/ci.yml)
-[![Security](https://github.com/SemRels/hook-discord/actions/workflows/security.yml/badge.svg)](https://github.com/SemRels/hook-discord/actions/workflows/security.yml)
+[![License](https://img.shields.io/github/license/SemRels/hook-discord)](LICENSE)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/SemRels/hook-discord/badge)](https://scorecard.dev/viewer/?uri=github.com/SemRels/hook-discord)
+[![REUSE status](https://api.reuse.software/badge/github.com/SemRels/hook-discord)](https://api.reuse.software/info/github.com/SemRels/hook-discord)
 
 Posts a release announcement to Discord using a webhook.
 
